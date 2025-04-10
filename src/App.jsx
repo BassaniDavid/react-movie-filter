@@ -1,15 +1,8 @@
 // fondamentale importare useState e useEffect altrimenti non funziona
 import { useState, useEffect } from 'react'
 
-// array di oggetti che corrispondono ai nostri dati di base
-const dataMovie = [
-  { title: 'Inception', genre: 'Fantascienza' },
-  { title: 'Il Padrino', genre: 'Thriller' },
-  { title: 'Titanic', genre: 'Romantico' },
-  { title: 'Batman', genre: 'Azione' },
-  { title: 'Interstellar', genre: 'Fantascienza' },
-  { title: 'Pulp Fiction', genre: 'Thriller' },
-]
+// importo i dati dei film salvati in un file js separato
+import dataMovie from './components/data';
 
 function App() {
   // useState per dinamicizzare la lista di film
