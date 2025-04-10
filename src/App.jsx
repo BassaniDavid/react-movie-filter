@@ -13,6 +13,17 @@ function App() {
 
   return (
     <>
+      <section>
+        <h2>cerca film</h2>
+        <label >genere</label>
+        <select>
+          <option value="">---</option>
+          <option>Fantascienza</option>
+          <option>Thriller</option>
+          <option>Romantico</option>
+          <option>Azione</option>
+        </select>
+      </section>
       <ul>
         {dataMovie.map((movie, index) =>
           <div key={index}>
