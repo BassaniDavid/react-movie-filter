@@ -1,0 +1,50 @@
+#root {
+  border: none;
+}
+
+main {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+section {
+  border: 2px solid rgb(181, 181, 181);
+  border-radius: 15px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 2em;
+}
+
+section label {
+  font-size: 1.3em;
+}
+
+div {
+  border: 2px solid rgb(181, 181, 181);
+  border-radius: 15px;
+  margin: 10px 20px;
+}
+
+.Fantascienza {
+  background-color: rgba(104, 176, 252, 0.4);
+}
+
+.Thriller {
+  background-color: rgba(239, 255, 121, .4);
+}
+
+.Romantico {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.Azione {
+  background-color: rgba(220, 220, 220, 0.4);
+}

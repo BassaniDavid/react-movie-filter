@@ -11,6 +11,7 @@ function App() {
   // useState per dinamicizzare la selezione del genere
   const [searchGenre, setSearchGenre] = useState("");
 
+
   // useEffect che si attiva nel momento in cui varia il genere selezionato
   useEffect(() => {
     console.log('si attiva useEffect con valore')
@@ -43,27 +44,29 @@ function App() {
 
   return (
     <>
-      <section>
-        <h2>cerca film</h2>
-        <label >genere:  </label>
-        {/* scelta opzioni. al cambiamento, i valori scatenano la funzione setSearchGenre che usiamo per variare i risultati in pagina*/}
-        <select value={searchGenre} onChange={e => setSearchGenre(e.target.value)}>
+      <main>
+        <section>
+          <h2>cerca film</h2>
+          <label >genere:  </label>
+          {/* scelta opzioni. al cambiamento, i valori scatenano la funzione setSearchGenre che usiamo per variare i risultati in pagina*/}
+          <select value={searchGenre} onChange={e => setSearchGenre(e.target.value)}>
 
-          {/* di default valore vuoto */}
-          <option value="">---</option>
-          <option>Fantascienza</option>
-          <option>Thriller</option>
-          <option>Romantico</option>
-          <option>Azione</option>
-        </select>
-      </section>
-      {/* itero sulla variabile movie(che è il risultato di eventuali filtri per produrre HTML cirrispondente ai film) */}
-      {movies.map((movie, index) =>
-        <div key={index}>
-          <p>titolo: {movie.title}</p>
-          <p>genere: {movie.genre}</p>
-        </div>
-      )}
+            {/* di default valore vuoto */}
+            <option value="">---</option>
+            <option>Fantascienza</option>
+            <option>Thriller</option>
+            <option>Romantico</option>
+            <option>Azione</option>
+          </select>
+        </section>
+        {/* itero sulla variabile movie(che è il risultato di eventuali filtri per produrre HTML cirrispondente ai film) */}
+        {movies.map((movie, index) =>
+          <div key={index} className={movie.genre}>
+            <p>titolo: <strong>{movie.title}</strong></p>
+            <p>genere: <strong>{movie.genre}</strong></p>
+          </div>
+        )}
+      </main>
     </>
   )
 }
